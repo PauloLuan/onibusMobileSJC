@@ -1,0 +1,82 @@
+function ApplicationTabGroup(Window) {
+
+	var thisObject = this;
+
+	thisObject.tabGroup = Ti.UI.createTabGroup();
+
+	var Main = require('ui/common/1-Main'), ListBus = require('ui/common/2-ListBus');
+	//DetailsBusTime = require('ui/common/3-DetailBusTime'),
+	//Configurations = require('ui/common/4-Configurations');
+
+	this.initializeTabs = function() {
+		thisObject.createMainTab();
+		thisObject.createListBusTab();
+		//thisObject.createConfigurationsTab();
+	}
+
+	this.createMainTab = function() {
+		var objectMain = new Main();
+		var mainView = objectMain.getMainView()
+
+		var mainWindow = Ti.UI.createWindow({
+			title : "Home",
+			exitOnClose : true,
+			navBarHidden : false,
+			backgroundColor : '#ffffff'
+		});
+		var mainTab = Ti.UI.createTab({
+			title : 'Principal',
+			icon : '/images/KS_nav_ui.png',
+			window : mainWindow
+		});
+		mainWindow.add(mainView);
+		mainWindow.containingTab = mainTab;
+		thisObject.tabGroup.addTab(mainTab);
+	}
+
+	this.createListBusTab = function() {
+		var objectMain = new Main();
+		var mainView = objectMain.getMainView()
+
+		var mainWindow = Ti.UI.createWindow({
+			title : "Home",
+			exitOnClose : true,
+			navBarHidden : false,
+			backgroundColor : '#ffffff'
+		});
+		var mainTab = Ti.UI.createTab({
+			title : 'Principal',
+			icon : '/images/KS_nav_ui.png',
+			window : mainWindow
+		});
+		mainWindow.add(mainView);
+		mainWindow.containingTab = mainTab;
+		thisObject.tabGroup.addTab(mainTab);
+	}
+
+	this.createConfigurationsTab = function() {
+		//var objectConfigurations = new Configurations();
+		//var configurationsView = objectConfigurations.getConfigurationsView()
+
+		var configurationWindow = Ti.UI.createWindow({
+			title : "Configurações",
+			exitOnClose : true,
+			navBarHidden : false,
+			backgroundColor : '#ffffff'
+		});
+		var configurationTab = Ti.UI.createTab({
+			title : 'Configurações',
+			icon : '/images/KS_nav_views.png',
+			window : configurationWindow
+		});
+
+		//configurationWindow.add(configurationsView);
+		//configurationWindow.containingTab = configurationTab;
+		//thisObject.tabGroup.addTab(configurationTab);
+	}
+
+	thisObject.initializeTabs();
+	return thisObject.tabGroup;
+};
+
+module.exports = ApplicationTabGroup;

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;OnibusSjc/Resources/ui/common/6-configurations.js&apos; to &apos;6-Configurations.js&apos;" description="Rename resource &apos;6-configurations.js&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Resources/ui/common/6-configurations.js" name="6-Configurations.js" stamp="1344732212974" updateReferences="true"/>
+</session>

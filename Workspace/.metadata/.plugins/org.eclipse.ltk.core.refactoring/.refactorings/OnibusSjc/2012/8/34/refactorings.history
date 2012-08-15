@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;OnibusSjc/Resources/db&apos; to &apos;database&apos;" description="Rename resource &apos;db&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Resources/db" name="database" stamp="1344965552460" updateReferences="true"/>
+</session>

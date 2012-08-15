@@ -1,0 +1,20 @@
+function ListBusView() {
+	var listBusViewObject = this;
+	
+	//create object instance, a parasitic subclass of Observable
+	var view = Ti.UI.createView();
+	
+	//label using localization-ready strings from <app dir>/i18n/en/strings.xml
+	var label = Ti.UI.createLabel({
+		color:'#000000',
+		text: "Welcome to MainView",
+		height:'auto',
+		width:'auto'
+	});
+	view.add(label);
+	
+	
+	return listBusViewObject;
+}
+
+module.exports = ListBusView; 

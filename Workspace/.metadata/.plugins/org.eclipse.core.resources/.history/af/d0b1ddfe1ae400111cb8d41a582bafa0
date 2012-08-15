@@ -1,0 +1,88 @@
+function ApplicationTabGroup(Window) {
+
+	var thisObject = this;
+
+	thisObject.tabGroup = Ti.UI.createTabGroup();
+
+	var Main = require('ui/common/1-Main'), ListBus = require('ui/common/2-ListBus'), DetailsBusTime = require('ui/common/3-DetailBusTime'), Favorites = require('ui/common/4-Favorites'), Configurations = require('ui/common/6-Configurations');
+
+	this.initializeTabs = function() {
+		thisObject.createMainTab();
+		thisObject.createListBusTab();
+		thisObject.createFavoritesTab();
+		thisObject.createConfigurationsTab();
+	}
+
+	this.createMainTab = function() {
+		var objectMain = new Main();
+		var mainView = objectMain.getMainView()
+		
+		var mainWindow = Ti.UI.createWindow({
+			title : "Home",
+			exitOnClose : true,
+			navBarHidden : false,
+			backgroundColor : '#ffffff'
+		});
+		var mainTab = Ti.UI.createTab({
+			title : 'Principal',
+			icon : '/images/KS_nav_ui.png',
+			window : mainWindow
+		});
+		mainWindow.add(mainView)
+		mainWindow.containingTab = mainTab;
+		thisObject.tabGroup.addTab(mainTab);
+	}
+
+	this.createListBusTab = function() {
+		var listBusWindow = Ti.UI.createWindow({
+			title : "Tela1",
+			exitOnClose : true,
+			navBarHidden : false,
+			backgroundColor : '#ffffff'
+		});
+		var listBusTab = Ti.UI.createTab({
+			title : 'Escolher Ônibus',
+			icon : '/images/KS_nav_views.png',
+			window : listBusWindow
+		});
+		listBusWindow.containingTab = listBusTab;
+		thisObject.tabGroup.addTab(listBusTab);
+	}
+
+	this.createFavoritesTab = function() {
+		var favoriteWindow = Ti.UI.createWindow({
+			title : "Tela1",
+			exitOnClose : true,
+			navBarHidden : false,
+			backgroundColor : '#ffffff'
+		});
+		var favoriteTab = Ti.UI.createTab({
+			title : 'Favoritos',
+			icon : '/images/KS_nav_views.png',
+			window : favoriteWindow
+		});
+		favoriteWindow.containingTab = favoriteTab;
+		thisObject.tabGroup.addTab(favoriteTab);
+	}
+
+	this.createConfigurationsTab = function() {
+		var configurationWindow = Ti.UI.createWindow({
+			title : "Mais",
+			exitOnClose : true,
+			navBarHidden : false,
+			backgroundColor : '#ffffff'
+		});
+		var configurationTab = Ti.UI.createTab({
+			title : 'Mais',
+			icon : '/images/KS_nav_views.png',
+			window : configurationWindow
+		});
+		configurationWindow.containingTab = configurationTab;
+		thisObject.tabGroup.addTab(configurationTab);
+	}
+
+	thisObject.initializeTabs();
+	return thisObject.tabGroup;
+};
+
+module.exports = ApplicationTabGroup;

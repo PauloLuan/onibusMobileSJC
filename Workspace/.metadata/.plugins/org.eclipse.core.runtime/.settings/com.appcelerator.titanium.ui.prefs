@@ -1,0 +1,9 @@
+Android\ Emulator\ Process\:ConsoleLogLevel=Info
+Application\ installer\:ConsoleLogLevel=Info
+FastDev\ Process\:ConsoleLogLevel=Info
+LAST_LAUNCH_TIMESTAMP=1345048376488
+eclipse.preferences.version=1
+preference.default.toolbar.visible_com.aptana.ui.WebPerspective=true
+preference.show.console.onError=true
+preference.studio.perspective.toolbar.visible=false
+preference.studio.perspective.version=100

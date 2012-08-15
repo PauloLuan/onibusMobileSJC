@@ -1,0 +1,8 @@
+function About() {
+	var aboutViewObject = this;
+	
+	
+	return aboutViewObject;
+}
+
+module.exports = About; 

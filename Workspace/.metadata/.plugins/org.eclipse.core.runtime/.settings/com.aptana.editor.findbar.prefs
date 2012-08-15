@@ -1,0 +1,3 @@
+FIND_BAR_DECORATOR_FIND_ENTRIES=\#\n\#Tue Aug 14 14\:28\:07 BRT 2012\n4\=win2\n3\=tab2\n2\=win3\n1\=tab3\n0\=Main\n
+FIND_BAR_DECORATOR_REPLACE_ENTRIES=\#\n\#Tue Aug 14 14\:28\:07 BRT 2012\n6\=listBusTab\n5\=favoriteWindow\n4\=favoriteTab\n3\=ListBus\n2\=DetailBusTime\n1\=Configurations\n0\=About\n7\=ListBusWindow\n
+eclipse.preferences.version=1
