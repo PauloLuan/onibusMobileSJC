@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;OnibusSjc/Resources/database/onibusdatabase.sqlite&apos; to &apos;busdatabase.sqlite&apos;" description="Rename resource &apos;onibusdatabase.sqlite&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Resources/database/onibusdatabase.sqlite" name="busdatabase.sqlite" stamp="1345484617840" updateReferences="true"/>
+</session>

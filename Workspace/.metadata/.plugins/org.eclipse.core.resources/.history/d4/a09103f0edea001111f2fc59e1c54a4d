@@ -1,0 +1,15 @@
+SELECT 	
+	*
+FROM 
+	linhas 
+INNER JOIN
+	itinerarios USING(lin_id)
+INNER JOIN
+	horarios_itinerarios USING(iti_id)
+INNER JOIN 
+	dias_semana USING(dia_id)
+WHERE 
+	lin_id = 125
+ORDER BY 
+	dia_id,
+	hit_horario

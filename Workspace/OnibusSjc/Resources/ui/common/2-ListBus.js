@@ -6,44 +6,42 @@ function ListBus() {
 
 	this.getListBusView = function() {
 		thisObject.openConnectionToDatabase();
-		
-		var label = Ti.UI.createLabel({
-			color : '#000000',
-			text : "Welcome to ListBusView",
-			height : 'auto',
-			width : 'auto'
-		});
-
-		thisObject.view.add(label);
 		return thisObject.view;
 	}
 
 	this.openConnectionToDatabase = function() {
-		var db = Ti.Database.install('database/onibusdatabase.sqlite', 'onibus');
-		var rows = db.execute('SELECT DISTINCT lin_descricao FROM linhas');
+		var db = Ti.Database.open('busDatabase');
 
+		var rows = db.execute('SELECT lin_id, lin_descricao FROM linhas');
 		var dataArray = [];
 
 		Ti.API.info('###########################################');
 		Ti.API.info('Resultados: \n');
 
 		while (rows.isValidRow()) {
-			Ti.API.info('' + rows.fieldByName('lin_descricao') + '');
-
-			/*dataArray.push({
-			 title : '' + rows.fieldByName('category') + '',
-			 hasChild : true,
-			 path : '../products/products.js'
-			 });*/
-
+			lineId = rows.fieldByName('lin_id');
+			lineDescripition = rows.fieldByName('lin_descricao');
+			Ti.API.info('\nID: ' + lineId + '\nDescrição: ' + lineDescripition);
+			dataArray.push({
+				title : lineDescripition,
+				id : lineId,
+				hasChild : true,
+			});
 			rows.next();
 		};
 
-		//thisObject.createListView(dataArray);
+		thisObject.createListView(dataArray);
 	}
 
 	this.createListView = function(data) {
-
+		var search = Ti.UI.createSearchBar({
+			hintText : 'Digite o nome de seu Ônibus'
+		});
+		var tableView = Ti.UI.createTableView({
+			search : search,
+			data : data
+		});
+		thisObject.view.add(tableView);
 	}
 
 	return thisObject;

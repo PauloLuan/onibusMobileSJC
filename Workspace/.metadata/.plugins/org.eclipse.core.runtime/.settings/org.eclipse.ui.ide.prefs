@@ -1,4 +1,6 @@
 EXIT_PROMPT_ON_CLOSE_LAST_WINDOW=false
+SHOW_COOLBAR=true
+SHOW_PERSPECTIVEBAR=true
 eclipse.preferences.version=1
 platformState=1344339950081
 quickStart=false

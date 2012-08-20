@@ -10,5 +10,5 @@
 <listEntry value="4"/>
 </listAttribute>
 <stringAttribute key="screen_type" value="HVGA"/>
-<stringAttribute key="sdk_version" value="Android 4.1"/>
+<stringAttribute key="sdk_version" value="Android 2.2"/>
 </launchConfiguration>

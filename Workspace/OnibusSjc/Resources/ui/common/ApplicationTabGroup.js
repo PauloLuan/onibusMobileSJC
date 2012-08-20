@@ -4,8 +4,10 @@ function ApplicationTabGroup(Window) {
 
 	thisObject.tabGroup = Ti.UI.createTabGroup();
 
-	var Main = require('ui/common/1-Main'), ListBus = require('ui/common/2-ListBus');
-	DetailsBusTime = require('ui/common/3-DetailBusTime'), Configurations = require('ui/common/4-Configurations');
+	var Main = require('ui/common/1-Main'), 
+		ListBus = require('ui/common/2-ListBus');
+		DetailsBusTime = require('ui/common/3-DetailBusTime'), 
+		Configurations = require('ui/common/4-Configurations');
 
 	this.initializeTabs = function() {
 		thisObject.createMainTab();
