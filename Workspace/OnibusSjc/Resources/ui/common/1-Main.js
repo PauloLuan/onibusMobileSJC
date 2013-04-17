@@ -15,7 +15,6 @@ function Main() {
 		thisObject.view.add(label);
 		return thisObject.view;
 	}
-
 	return thisObject;
 }
 

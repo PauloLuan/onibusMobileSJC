@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench version="2.0">
 <workbenchAdvisor/>
-<window height="781" maximized="true" width="1280" x="0" y="19">
+<window height="687" width="1280" x="2" y="36">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -17,12 +17,14 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="152" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.aptana.editor.php" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.appcelerator.titanium.ui.ide.tiappEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.aptana.editor.js" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
-<page focus="true" label="Workspace - Web">
+<page aggregateWorkingSetId="Aggregate for window 1345479628696" focus="true" label="Workspace - Web">
 <editors>
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
@@ -34,13 +36,9 @@
 </folder>
 </info>
 </editorArea>
-<editor id="com.aptana.editor.js" name="ApplicationTabGroup.js" partName="ApplicationTabGroup.js" path="/Users/funcatemobile/Dropbox/Source Codes/OnibusSJC/onibusMobileSJC/Workspace/OnibusSjc/Resources/ui/common/ApplicationTabGroup.js" title="ApplicationTabGroup.js" tooltip="OnibusSjc/Resources/ui/common/ApplicationTabGroup.js" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OnibusSjc/Resources/ui/common/ApplicationTabGroup.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="486" selectionTopPixel="0"/>
-</editor>
-<editor activePart="true" focus="true" id="com.aptana.editor.js" name="2-ListBus.js" partName="2-ListBus.js" path="/Users/funcatemobile/Dropbox/Source Codes/OnibusSJC/onibusMobileSJC/Workspace/OnibusSjc/Resources/ui/common/2-ListBus.js" title="2-ListBus.js" tooltip="OnibusSjc/Resources/ui/common/2-ListBus.js" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OnibusSjc/Resources/ui/common/2-ListBus.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="247" selectionTopPixel="0"/>
+<editor id="com.aptana.editor.js" name="1-Main.js" partName="1-Main.js" path="/Users/funcatemobile/Dropbox/Source Codes/OnibusSJC/onibusMobileSJC/Workspace/OnibusSjc/Resources/ui/common/1-Main.js" title="1-Main.js" tooltip="OnibusSjc/Resources/ui/common/1-Main.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OnibusSjc/Resources/ui/common/1-Main.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="366" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -50,15 +48,25 @@
 <view id="com.aptana.snippets.ui.views.SnippetsView" partName="Snippets"/>
 <view id="com.aptana.terminal.views.terminal" partName="Terminal"/>
 <view id="com.aptana.samples.ui.SamplesView" partName="Samples"/>
-<view id="org.eclipse.ui.views.ProblemView" partName="Problems"/>
+<view id="org.eclipse.ui.views.ProblemView" partName="Problems">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
 <view id="org.eclipse.ui.console.ConsoleView" partName="Console">
 <viewState/>
 </view>
 <view id="com.aptana.explorer.view" partName="App Explorer">
 <viewState CommonNavigator.LINKING_ENABLED="0" GitChangedFilesFilterEnabled="" activeProject="OnibusSjc">
-<project name="OnibusSjc">
-<selection>
-<element path="/OnibusSjc/Resources"/>
+<project name="OnibusSjc">&#x0A;<expanded>&#x0A;<element path="/OnibusSjc/Resources"/>
+<element path="/OnibusSjc/Resources/database"/>
+</expanded>
+<selection>&#x0A;<element path="/OnibusSjc/Resources/database/querys.sql"/>
 </selection>
 </project>
 </viewState>
@@ -67,7 +75,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="com.aptana.editor.js" activePerspective="com.aptana.ui.WebPerspective">
+<perspectives activePart="org.eclipse.ui.navigator.ProjectExplorer" activePerspective="com.aptana.ui.WebPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.appcelerator.titanium.ui.perspectives.TitaniumStudioPerspectiveFactory" id="com.appcelerator.titanium.ui.StudioPerspective" label="Studio"/>
 <alwaysOnActionSet id="com.aptana.browser.actionSet"/>
@@ -104,46 +112,33 @@
 <view id="org.eclipse.ui.navigator.ProjectExplorer"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <fastViewBars/>
-<layout>
-<mainWindow>
-<info folder="true" part="leftArea">
-<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
-<page content="com.aptana.explorer.view" label="App Explorer"/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="leftArea">&#x0A;<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">&#x0A;<page content="com.aptana.explorer.view" label="App Explorer"/>
 <page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
 <page content="com.aptana.ui.io.remoteview" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="882" ratioRight="294" relationship="2" relative="leftArea">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="882" ratioRight="294" relationship="2" relative="leftArea">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.19483395" ratioLeft="264" ratioRight="1091" relationship="2" relative="leftArea"/>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@2ddc4c" ratio="0.75" ratioLeft="477" ratioRight="159" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
-<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@2ddc4c" ratio="0.75" ratioLeft="477" ratioRight="159" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="com.aptana.terminal.views.terminal" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
 <page content="com.aptana.webserver.ui.view" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="bottomLeft" ratio="0.75" ratioLeft="477" ratioRight="159" relationship="4" relative="leftArea">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info folder="true" part="bottomLeft" ratio="0.75" ratioLeft="477" ratioRight="159" relationship="4" relative="leftArea">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="com.aptana.samples.ui.SamplesView" label="LabelNotFound"/>
 <page content="com.aptana.snippets.ui.views.SnippetsView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
@@ -203,7 +198,7 @@
 <fastViewBars>
 <fastViewBar fastViewLocation="1024" id="terminalArea" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="0">
 <fastViews>
-<view id="org.eclipse.ui.console.ConsoleView" ratio="0.2994429"/>
+<view id="org.eclipse.ui.console.ConsoleView" ratio="0.29805014"/>
 <view id="com.aptana.terminal.views.terminal" ratio="0.3"/>
 <view id="org.eclipse.ui.views.ProblemView" ratio="0.3"/>
 </fastViews>
@@ -229,9 +224,9 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.19955817" ratioLeft="271" ratioRight="1087" relationship="2" relative="left"/>
+<info part="org.eclipse.ui.editorss" ratio="0.24980299" ratioLeft="317" ratioRight="952" relationship="2" relative="left"/>
 <info folder="true" part="terminalArea" ratio="0.75" ratioLeft="489" ratioRight="163" relationship="4" relative="org.eclipse.ui.editorss">
-<folder appearance="2" expanded="0">
+<folder appearance="2" expanded="2">
 <page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
 <page content="com.aptana.terminal.views.terminal" label="LabelNotFound"/>
 <page content="org.eclipse.pde.runtime.LogView" label="LabelNotFound"/>
@@ -257,49 +252,12 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/OnibusSjc/Resources/ui/common/ApplicationTabGroup.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/OnibusSjc/Resources/ui/common/2-ListBus.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/OnibusSjc/Resources/ui/common/3-DetailBusTime.js"/>
-</editors>
-<item historyLabel="ApplicationTabGroup.js" index="0">
-<position info="not_deleted" x="486" y="0"/>
-</item>
-<item historyLabel="2-ListBus.js" index="1">
-<position/>
-</item>
-<item historyLabel="3-DetailBusTime.js" index="2">
-<position info="not_deleted" x="391" y="0"/>
-</item>
-<item historyLabel="2-ListBus.js" index="1">
-<position info="not_deleted" x="852" y="0"/>
-</item>
-<item historyLabel="2-ListBus.js" index="1">
-<position info="not_deleted" x="885" y="0"/>
-</item>
-<item historyLabel="2-ListBus.js" index="1">
-<position info="not_deleted" x="996" y="0"/>
-</item>
-<item historyLabel="2-ListBus.js" index="1">
-<position info="not_deleted" x="1093" y="0"/>
-</item>
-<item historyLabel="2-ListBus.js" index="1">
-<position/>
-</item>
-<item active="true" historyLabel="2-ListBus.js" index="1">
-<position info="not_deleted" x="1015" y="0"/>
-</item>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@13e0f27"/>
-<trimItem IMemento.internal.id="left"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -313,6 +271,27 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="index.php" tooltip="/Users/funcatemobile/Dropbox/Source Codes/OnibusSJC/busao-online/index.php">
+<persistable uri="file:/Users/funcatemobile/Dropbox/Source%20Codes/OnibusSJC/busao-online/index.php"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="1-Main.js" tooltip="OnibusSjc/Resources/ui/common/1-Main.js">
+<persistable path="/OnibusSjc/Resources/ui/common/1-Main.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="querys.sql" tooltip="OnibusSjc/Resources/database/querys.sql">
+<persistable path="/OnibusSjc/Resources/database/querys.sql"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="OnibusSjc/Resources/app.js">
+<persistable path="/OnibusSjc/Resources/app.js"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="Horario.php" tooltip="/Users/funcatemobile/Dropbox/Source Codes/OnibusSJC/busao-online/src/Horario.php">
+<persistable uri="file:/Users/funcatemobile/Dropbox/Source%20Codes/OnibusSJC/busao-online/src/Horario.php"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="/Users/funcatemobile/Dropbox/Funcate/Mobile/contratosmobile/ClientWorkspace/ContratosMobile/Resources/app.js">
+<persistable uri="file:/Users/funcatemobile/Dropbox/Funcate/Mobile/contratosmobile/ClientWorkspace/ContratosMobile/Resources/app.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.appcelerator.titanium.ui.ide.tiappEditor" name="tiapp.xml" tooltip="OnibusSjc/tiapp.xml">
+<persistable path="/OnibusSjc/tiapp.xml"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="3-DetailBusTime.js" tooltip="OnibusSjc/Resources/ui/common/3-DetailBusTime.js">
 <persistable path="/OnibusSjc/Resources/ui/common/3-DetailBusTime.js"/>
 </file>
@@ -331,26 +310,8 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="ApplicationWindow.js" tooltip="OnibusSjc/Resources/ui/handheld/ApplicationWindow.js">
 <persistable path="/OnibusSjc/Resources/ui/handheld/ApplicationWindow.js"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="1-Main.js" tooltip="OnibusSjc/Resources/ui/common/1-Main.js">
-<persistable path="/OnibusSjc/Resources/ui/common/1-Main.js"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="KS_nav_ui.png" tooltip="OnibusSjc/Resources/images/KS_nav_ui.png">
 <persistable path="/OnibusSjc/Resources/images/KS_nav_ui.png"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="KS_nav_views.png" tooltip="OnibusSjc/Resources/images/KS_nav_views.png">
-<persistable path="/OnibusSjc/Resources/images/KS_nav_views.png"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="default.png" tooltip="OnibusSjc/Resources/android/default.png">
-<persistable path="/OnibusSjc/Resources/android/default.png"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="default.png" tooltip="OnibusSjc/Resources/android/images/res-long-land-hdpi/default.png">
-<persistable path="/OnibusSjc/Resources/android/images/res-long-land-hdpi/default.png"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="OnibusSjc/Resources/app.js">
-<persistable path="/OnibusSjc/Resources/app.js"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.appcelerator.titanium.ui.ide.tiappEditor" name="tiapp.xml" tooltip="OnibusSjc/tiapp.xml">
-<persistable path="/OnibusSjc/tiapp.xml"/>
 </file>
 </mruList>
 </workbench>

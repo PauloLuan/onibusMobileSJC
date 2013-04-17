@@ -1,6 +1,0 @@
-function DetailBusTime() {
-	var detailBusTimeViewObject = this;
-	return detailBusTimeViewObject;
-}
-
-module.exports = DetailBusTime; 
