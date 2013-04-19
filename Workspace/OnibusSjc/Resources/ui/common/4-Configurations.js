@@ -7,7 +7,7 @@ function Configurations() {
 	this.getConfigurationsView = function() {
 		var label = Ti.UI.createLabel({
 			color : '#000000',
-			text : "Welcome to ConfigurationsView",
+			text : "Tela de configurações.",
 			height : 'auto',
 			width : 'auto'
 		});

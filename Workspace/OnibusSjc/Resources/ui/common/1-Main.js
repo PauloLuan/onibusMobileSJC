@@ -7,7 +7,7 @@ function Main() {
 	this.getMainView = function() {
 		var label = Ti.UI.createLabel({
 			color : '#000000',
-			text : "Welcome to MainView",
+			text : "Seja Bem vindo ao Ônibus SJC!",
 			height : 'auto',
 			width : 'auto'
 		});
