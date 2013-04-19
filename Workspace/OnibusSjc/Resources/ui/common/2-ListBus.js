@@ -10,37 +10,42 @@ function ListBus() {
 	}
 
 	this.openConnectionToDatabase = function() {
-		var db = Ti.Database.open('busDatabase');
-
-		var rows = db.execute('SELECT lin_id, lin_descricao FROM linhas');
-		var dataArray = [];
-
-		Ti.API.info('###########################################');
-		Ti.API.info('Resultados: \n');
-
-		while (rows.isValidRow()) {
-			lineId = rows.fieldByName('lin_id');
-			lineDescripition = rows.fieldByName('lin_descricao');
-			Ti.API.info('\nID: ' + lineId + '\nDescrição: ' + lineDescripition);
-			dataArray.push({
-				title : lineDescripition,
-				id : lineId,
-				hasChild : true,
-			});
-			rows.next();
-		};
-
-		thisObject.createListView(dataArray);
+		var db = Ti.Database.open('onibus');
+		var rows = db.execute('SELECT * FROM onibus');
+		var jsonString = rows.fieldByName('json');
+		var json = JSON.parse(jsonString);
+		Ti.API.info('\nOnibus 1: ' + json[0].nome);
+		thisObject.createListView(json);
 	}
 
-	this.createListView = function(data) {
+	this.createListView = function(json) {
 		var search = Ti.UI.createSearchBar({
 			hintText : 'Digite o nome de seu Ônibus'
 		});
+
+		dataArray = []
+
+		for (var i = 0; i < json.length; i++) {
+			dataArray.push({
+				title : json[i].nome,
+				id : i,
+				hasChild : true
+			});
+		};
+
 		var tableView = Ti.UI.createTableView({
 			search : search,
-			data : data
+			data : dataArray
 		});
+
+		tableView.addEventListener('click', function(e) {
+			var id = e.rowData.id;
+			thisObject.view.fireEvent('openScreenDetailsBusTime', {
+				id : id,
+				json:json
+			});
+		});
+
 		thisObject.view.add(tableView);
 	}
 

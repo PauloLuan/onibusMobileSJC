@@ -2,13 +2,16 @@ function ApplicationTabGroup(Window) {
 
 	var thisObject = this;
 
-	thisObject.tabGroup = Ti.UI.createTabGroup();
 
-	var Main = require('ui/common/1-Main'), 
+	var Main = require('ui/common/1-Main'),
 		ListBus = require('ui/common/2-ListBus');
-		DetailsBusTime = require('ui/common/3-DetailBusTime'), 
+		DetailsBusTime = require('ui/common/3-DetailBusTime'),
 		Configurations = require('ui/common/4-Configurations');
+		About = require('ui/common/5-About');
 
+	thisObject.tabGroup = Ti.UI.createTabGroup();
+	thisObject.listBusTab; 
+	
 	this.initializeTabs = function() {
 		thisObject.createMainTab();
 		thisObject.createListBusTab();
@@ -27,7 +30,7 @@ function ApplicationTabGroup(Window) {
 		});
 		var mainTab = Ti.UI.createTab({
 			title : 'Principal',
-			icon : '/images/KS_nav_ui.png',
+			icon : '/images/icon-home.png',
 			window : mainWindow
 		});
 		mainWindow.add(mainView);
@@ -45,14 +48,22 @@ function ApplicationTabGroup(Window) {
 			navBarHidden : false,
 			backgroundColor : '#ffffff'
 		});
-		var listBusTab = Ti.UI.createTab({
+
+		listBusWindow.add(listBusView);
+
+		thisObject.listBusTab = Ti.UI.createTab({
 			title : 'Escolher Ônibus',
 			icon : '/images/KS_nav_ui.png',
 			window : listBusWindow
 		});
-		listBusWindow.add(listBusView);
-		listBusWindow.containingTab = listBusTab;
-		thisObject.tabGroup.addTab(listBusTab);
+
+		listBusWindow.containingTab = thisObject.listBusTab;
+
+		listBusView.addEventListener('openScreenDetailsBusTime', function(e) {
+			thisObject.openScreenDetailsBusTime(e.id, e.json);
+		});
+
+		thisObject.tabGroup.addTab(thisObject.listBusTab);
 	}
 
 	this.createConfigurationsTab = function() {
@@ -74,6 +85,17 @@ function ApplicationTabGroup(Window) {
 		configurationWindow.add(configurationsView);
 		configurationWindow.containingTab = configurationTab;
 		thisObject.tabGroup.addTab(configurationTab);
+	}
+
+	this.openScreenDetailsBusTime = function(id, json) {
+		var objectDetailsBusTime = new DetailsBusTime();
+		var detailsBusTimeView = objectDetailsBusTime.getViewDetailsBusTime(id, json);
+		var detailsBusTimeScreen = Ti.UI.createWindow({
+			title : 'Horários',
+			backgroundColor : '#ffffff'
+		});
+		detailsBusTimeScreen.add(detailsBusTimeView);
+		thisObject.listBusTab.open(detailsBusTimeScreen);
 	}
 
 	thisObject.initializeTabs();

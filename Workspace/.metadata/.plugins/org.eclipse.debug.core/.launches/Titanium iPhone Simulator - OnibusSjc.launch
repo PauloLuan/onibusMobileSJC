@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="com.appcelerator.titanium.mobile.ui.ios.simulator.launchConfigurationType">
-<booleanAttribute key="ATTR_CLEAN_BEFORE_LAUNCH" value="true"/>
-<stringAttribute key="ATTR_LOG_LEVEL" value="Info"/>
 <stringAttribute key="ATTR_PROJECT_NAME" value="OnibusSjc"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
 <listEntry value="/OnibusSjc"/>
@@ -10,6 +8,6 @@
 <listEntry value="4"/>
 </listAttribute>
 <booleanAttribute key="retina_display" value="false"/>
-<stringAttribute key="sdk_version" value="5.1"/>
+<stringAttribute key="sdk_version" value="6.1"/>
 <stringAttribute key="sim_device" value="iPhone"/>
 </launchConfiguration>

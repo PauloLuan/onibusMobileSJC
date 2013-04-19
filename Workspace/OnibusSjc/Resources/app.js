@@ -18,8 +18,22 @@ if (Ti.version < 1.8) {
 // This is a single context application with mutliple windows in a stack
 (function() {
 
-	Ti.Database.install('database/busdatabase.sqlite', 'busDatabase');
+	Ti.Database.install('database/onibus.sqlite', 'onibus');
 
+	Ti.App.createNormalLabel = function(text) {
+		var label = Titanium.UI.createLabel({
+			text : text,
+			textAlign : 'left',
+			left : '15dp',
+			right : '10dp',
+			top : '10dp',
+			color : 'black',
+			font : {
+				fontSize : '14dp'
+			}
+		});
+		return label;
+	}
 	//determine platform and form factor and render approproate components
 	var osname = Ti.Platform.osname, version = Ti.Platform.version, height = Ti.Platform.displayCaps.platformHeight, width = Ti.Platform.displayCaps.platformWidth;
 
