@@ -34771,3 +34771,913 @@ Contains: The project description file (.project) for 'testee' is missing.  This
 !MESSAGE Errors occurred while refreshing resources with the local file system.
 !SUBENTRY 3 org.eclipse.core.resources 4 567 2013-04-19 15:53:42.765
 !MESSAGE The project description file (.project) for 'testee' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2013-04-20 14:44:23.948
+!MESSAGE Connection to http://download.appcelerator.com/appcelerator/studio/standalone/update/stable/p2.index failed on Operation timed out. Retry attempt 0 started
+!STACK 0
+java.net.ConnectException: Operation timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:351)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:213)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:432)
+	at java.net.Socket.connect(Socket.java:529)
+	at org.eclipse.ecf.provider.filetransfer.events.socket.SocketEventCreateUtil.createSocket(SocketEventCreateUtil.java:43)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:81)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:73)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:65)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open(MultiThreadedHttpConnectionManager.java:1361)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:346)
+	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1142)
+	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:710)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:889)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:349)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:295)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:87)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:137)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadIndexFile(AbstractRepositoryManager.java:721)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:640)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:82)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2013-04-20 14:59:47.839
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to connect to repository http://download.appcelerator.com/appcelerator/studio/standalone/update/stable/content.xml
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:189)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.getLocalFile(SimpleMetadataRepositoryFactory.java:66)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:88)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:749)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:651)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:82)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.net.ConnectException: Operation timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:351)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:213)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:432)
+	at java.net.Socket.connect(Socket.java:529)
+	at org.eclipse.ecf.provider.filetransfer.events.socket.SocketEventCreateUtil.createSocket(SocketEventCreateUtil.java:43)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:81)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:73)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:65)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open(MultiThreadedHttpConnectionManager.java:1361)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:346)
+	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:227)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	... 1 more
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2013-04-20 14:59:47.841
+!MESSAGE Unable to connect to repository http://download.appcelerator.com/appcelerator/studio/standalone/update/stable/content.xml
+!STACK 0
+java.net.ConnectException: Operation timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:351)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:213)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:432)
+	at java.net.Socket.connect(Socket.java:529)
+	at org.eclipse.ecf.provider.filetransfer.events.socket.SocketEventCreateUtil.createSocket(SocketEventCreateUtil.java:43)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:81)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:73)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:65)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open(MultiThreadedHttpConnectionManager.java:1361)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:346)
+	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:227)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2013-04-20 15:04:56.852
+!MESSAGE Connection to http://download.appcelerator.com/appcelerator/studio/standalone/update/stable/p2.index failed on Operation timed out. Retry attempt 0 started
+!STACK 0
+java.net.ConnectException: Operation timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:351)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:213)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:432)
+	at java.net.Socket.connect(Socket.java:529)
+	at org.eclipse.ecf.provider.filetransfer.events.socket.SocketEventCreateUtil.createSocket(SocketEventCreateUtil.java:43)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:81)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:73)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:65)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open(MultiThreadedHttpConnectionManager.java:1361)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:346)
+	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1142)
+	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:710)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:889)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:349)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:295)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:87)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:137)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadIndexFile(AbstractRepositoryManager.java:721)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:640)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.loadMetadataRepository(ProvisioningContext.java:211)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getLoadedMetadataRepositories(ProvisioningContext.java:194)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getMetadata(ProvisioningContext.java:275)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.updatesFor(SimplePlanner.java:774)
+	at org.eclipse.equinox.p2.operations.UpdateOperation.updatesFor(UpdateOperation.java:143)
+	at org.eclipse.equinox.p2.operations.UpdateOperation.computeProfileChangeRequest(UpdateOperation.java:180)
+	at org.eclipse.equinox.p2.operations.UpdateOperation$1.run(UpdateOperation.java:324)
+	at org.eclipse.equinox.internal.p2.operations.SearchForUpdatesResolutionJob.runModal(SearchForUpdatesResolutionJob.java:37)
+	at org.eclipse.equinox.p2.operations.ProfileChangeOperation.resolveModal(ProfileChangeOperation.java:115)
+	at org.eclipse.equinox.internal.p2.ui.sdk.UpdateHandler.doPostLoadBackgroundWork(UpdateHandler.java:49)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:86)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2013-04-20 15:20:16.779
+!MESSAGE Unable to connect to repository http://download.appcelerator.com/appcelerator/studio/standalone/update/stable/content.xml
+!STACK 0
+java.net.ConnectException: Operation timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:351)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:213)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:432)
+	at java.net.Socket.connect(Socket.java:529)
+	at org.eclipse.ecf.provider.filetransfer.events.socket.SocketEventCreateUtil.createSocket(SocketEventCreateUtil.java:43)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:81)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:73)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:65)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open(MultiThreadedHttpConnectionManager.java:1361)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:346)
+	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:227)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.appcelerator.titanium.nodejs.core 4 0 2013-04-20 15:39:36.908
+!MESSAGE (Build 3.1.0.201304151600) [ERROR]  Could not instantiate a release notes provider
+!STACK 1
+org.eclipse.core.runtime.CoreException: Plug-in "com.appcelerator.titanium.mobile.ui" was unable to instantiate class "com.appcelerator.titanium.mobile.internal.ui.CLIReleaseNotesProvider".
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.throwException(RegistryStrategyOSGI.java:194)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:186)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at com.appcelerator.titanium.nodejs.core.NPMConfigurationComponent.getReleaseNotesProvider(NPMConfigurationComponent.java:159)
+	at com.appcelerator.titanium.update.internal.TitaniumNPMRelease.getReleaseNotesProvider(TitaniumNPMRelease.java:58)
+	at com.appcelerator.titanium.update.TitaniumRelease.getReleaseNotesText(TitaniumRelease.java:72)
+	at com.appcelerator.titanium.update.ui.TitaniumUpdatePage.updateDetails(TitaniumUpdatePage.java:441)
+	at com.appcelerator.titanium.update.ui.TitaniumUpdatePage.createControl(TitaniumUpdatePage.java:506)
+	at org.eclipse.jface.wizard.Wizard.createPageControls(Wizard.java:174)
+	at org.eclipse.jface.wizard.WizardDialog.createPageControls(WizardDialog.java:736)
+	at org.eclipse.jface.wizard.WizardDialog.createContents(WizardDialog.java:608)
+	at org.eclipse.jface.window.Window.create(Window.java:431)
+	at org.eclipse.jface.dialogs.Dialog.create(Dialog.java:1089)
+	at com.appcelerator.titanium.update.ui.TitaniumUpdateWizardDialog.open(TitaniumUpdateWizardDialog.java:66)
+	at com.appcelerator.titanium.update.handler.TitaniumUpdateHandler$1$1.run(TitaniumUpdateHandler.java:67)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3938)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3615)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at com.appcelerator.titanium.rcp.IDEApplication.start(IDEApplication.java:125)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+Caused by: java.lang.IllegalAccessException: Class org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI can not access a member of class com.appcelerator.titanium.mobile.internal.ui.CLIReleaseNotesProvider with modifiers ""
+	at sun.reflect.Reflection.ensureMemberAccess(Reflection.java:65)
+	at java.lang.Class.newInstance0(Class.java:349)
+	at java.lang.Class.newInstance(Class.java:308)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:184)
+	... 39 more
+!SUBENTRY 1 org.eclipse.equinox.registry 4 1 2013-04-20 15:39:36.909
+!MESSAGE Plug-in "com.appcelerator.titanium.mobile.ui" was unable to instantiate class "com.appcelerator.titanium.mobile.internal.ui.CLIReleaseNotesProvider".
+!STACK 0
+java.lang.IllegalAccessException: Class org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI can not access a member of class com.appcelerator.titanium.mobile.internal.ui.CLIReleaseNotesProvider with modifiers ""
+	at sun.reflect.Reflection.ensureMemberAccess(Reflection.java:65)
+	at java.lang.Class.newInstance0(Class.java:349)
+	at java.lang.Class.newInstance(Class.java:308)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:184)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at com.appcelerator.titanium.nodejs.core.NPMConfigurationComponent.getReleaseNotesProvider(NPMConfigurationComponent.java:159)
+	at com.appcelerator.titanium.update.internal.TitaniumNPMRelease.getReleaseNotesProvider(TitaniumNPMRelease.java:58)
+	at com.appcelerator.titanium.update.TitaniumRelease.getReleaseNotesText(TitaniumRelease.java:72)
+	at com.appcelerator.titanium.update.ui.TitaniumUpdatePage.updateDetails(TitaniumUpdatePage.java:441)
+	at com.appcelerator.titanium.update.ui.TitaniumUpdatePage.createControl(TitaniumUpdatePage.java:506)
+	at org.eclipse.jface.wizard.Wizard.createPageControls(Wizard.java:174)
+	at org.eclipse.jface.wizard.WizardDialog.createPageControls(WizardDialog.java:736)
+	at org.eclipse.jface.wizard.WizardDialog.createContents(WizardDialog.java:608)
+	at org.eclipse.jface.window.Window.create(Window.java:431)
+	at org.eclipse.jface.dialogs.Dialog.create(Dialog.java:1089)
+	at com.appcelerator.titanium.update.ui.TitaniumUpdateWizardDialog.open(TitaniumUpdateWizardDialog.java:66)
+	at com.appcelerator.titanium.update.handler.TitaniumUpdateHandler$1$1.run(TitaniumUpdateHandler.java:67)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3938)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3615)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at com.appcelerator.titanium.rcp.IDEApplication.start(IDEApplication.java:125)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+
+!ENTRY com.aptana.js.core 4 0 2013-04-20 16:37:48.521
+!MESSAGE (Build 3.1.0.201304151600) [ERROR]  Failed to install titanium.
+
+npm http GET https://registry.npmjs.org/titanium
+npm http GET https://registry.npmjs.org/titanium
+npm http GET https://registry.npmjs.org/titanium
+npm http GET https://registry.npmjs.org/titanium/-/titanium-3.1.0.tgz
+npm ERR! fetch failed https://registry.npmjs.org/titanium/-/titanium-3.1.0.tgz
+npm http GET https://registry.npmjs.org/titanium/-/titanium-3.1.0.tgz
+npm ERR! fetch failed https://registry.npmjs.org/titanium/-/titanium-3.1.0.tgz
+npm http GET https://registry.npmjs.org/titanium/-/titanium-3.1.0.tgz
+npm ERR! fetch failed https://registry.npmjs.org/titanium/-/titanium-3.1.0.tgz
+npm ERR! Error: tunneling socket could not be established, cause=connect ETIMEDOUT
+npm ERR!     at ClientRequest.onError (/usr/local/lib/node_modules/npm/node_modules/request/tunnel.js:161:17)
+npm ERR!     at ClientRequest.g (events.js:192:14)
+npm ERR!     at ClientRequest.EventEmitter.emit (events.js:96:17)
+npm ERR!     at CleartextStream.socketErrorListener (http.js:1449:9)
+npm ERR!     at CleartextStream.EventEmitter.emit (events.js:96:17)
+npm ERR!     at Socket.onerror (tls.js:1336:17)
+npm ERR!     at Socket.EventEmitter.emit (events.js:126:20)
+npm ERR!     at Socket._destroy.self.errorEmitted (net.js:329:14)
+npm ERR!     at process.startup.processNextTick.process._tickCallback (node.js:245:9)
+npm ERR! If you need help, you may report this log at:
+npm ERR!     <http://github.com/isaacs/npm/issues>
+npm ERR! or email it to:
+npm ERR!     <npm-@googlegroups.com>
+
+npm ERR! System Darwin 11.4.2
+npm ERR! command "node" "/usr/local/bin/npm" "-g" "install" "titanium" "--color" "false" "--proxy" "http://192.168.4.1:3128" "--https-proxy" "https://192.168.4.1:3128"
+npm ERR! cwd /Users/funcatemobile/Documents/Desenvolvimento/Titanium3.1/Titanium Studio/TitaniumStudio.app/Contents/MacOS
+npm ERR! node -v v0.8.22
+npm ERR! npm -v 1.2.14
+npm ERR! code ECONNRESET
+npm ERR! 
+npm ERR! Additional logging details can be found in:
+npm ERR!     /Users/funcatemobile/Documents/Desenvolvimento/Titanium3.1/Titanium Studio/TitaniumStudio.app/Contents/MacOS/npm-debug.log
+npm ERR! not ok code 0
+
+!ENTRY com.aptana.js.core 4 0 2013-04-20 16:47:43.249
+!MESSAGE (Build 3.1.0.201304151600) [ERROR]  Failed to install alloy.
+
+Password:npm http GET https://registry.npmjs.org/alloy
+npm http GET https://registry.npmjs.org/alloy
+npm http GET https://registry.npmjs.org/alloy
+npm http GET https://registry.npmjs.org/alloy/-/alloy-1.1.0.tgz
+npm ERR! fetch failed https://registry.npmjs.org/alloy/-/alloy-1.1.0.tgz
+npm http GET https://registry.npmjs.org/alloy/-/alloy-1.1.0.tgz
+npm ERR! fetch failed https://registry.npmjs.org/alloy/-/alloy-1.1.0.tgz
+npm http GET https://registry.npmjs.org/alloy/-/alloy-1.1.0.tgz
+npm ERR! fetch failed https://registry.npmjs.org/alloy/-/alloy-1.1.0.tgz
+npm ERR! Error: tunneling socket could not be established, cause=connect ETIMEDOUT
+npm ERR!     at ClientRequest.onError (/usr/local/lib/node_modules/npm/node_modules/request/tunnel.js:161:17)
+npm ERR!     at ClientRequest.g (events.js:192:14)
+npm ERR!     at ClientRequest.EventEmitter.emit (events.js:96:17)
+npm ERR!     at CleartextStream.socketErrorListener (http.js:1449:9)
+npm ERR!     at CleartextStream.EventEmitter.emit (events.js:96:17)
+npm ERR!     at Socket.onerror (tls.js:1336:17)
+npm ERR!     at Socket.EventEmitter.emit (events.js:126:20)
+npm ERR!     at Socket._destroy.self.errorEmitted (net.js:329:14)
+npm ERR!     at process.startup.processNextTick.process._tickCallback (node.js:245:9)
+npm ERR! If you need help, you may report this log at:
+npm ERR!     <http://github.com/isaacs/npm/issues>
+npm ERR! or email it to:
+npm ERR!     <npm-@googlegroups.com>
+
+npm ERR! System Darwin 11.4.2
+npm ERR! command "node" "/usr/local/bin/npm" "-g" "install" "alloy" "--color" "false" "--proxy" "http://192.168.4.1:3128" "--https-proxy" "https://192.168.4.1:3128"
+npm ERR! cwd /Users/funcatemobile/Documents/Desenvolvimento/Titanium3.1/Titanium Studio/TitaniumStudio.app/Contents/MacOS
+npm ERR! node -v v0.8.22
+npm ERR! npm -v 1.2.14
+npm ERR! code ECONNRESET
+npm ERR! 
+npm ERR! Additional logging details can be found in:
+npm ERR!     /Users/funcatemobile/Documents/Desenvolvimento/Titanium3.1/Titanium Studio/TitaniumStudio.app/Contents/MacOS/npm-debug.log
+npm ERR! not ok code 0
+
+!ENTRY com.aptana.js.core 4 0 2013-04-20 16:57:38.379
+!MESSAGE (Build 3.1.0.201304151600) [ERROR]  Failed to install acs.
+
+Password:npm http GET https://registry.npmjs.org/acs
+npm http GET https://registry.npmjs.org/acs
+npm http GET https://registry.npmjs.org/acs
+npm http GET https://registry.npmjs.org/acs/-/acs-1.0.0.tgz
+npm ERR! fetch failed https://registry.npmjs.org/acs/-/acs-1.0.0.tgz
+npm http GET https://registry.npmjs.org/acs/-/acs-1.0.0.tgz
+npm ERR! fetch failed https://registry.npmjs.org/acs/-/acs-1.0.0.tgz
+npm http GET https://registry.npmjs.org/acs/-/acs-1.0.0.tgz
+npm ERR! fetch failed https://registry.npmjs.org/acs/-/acs-1.0.0.tgz
+npm ERR! Error: tunneling socket could not be established, cause=connect ETIMEDOUT
+npm ERR!     at ClientRequest.onError (/usr/local/lib/node_modules/npm/node_modules/request/tunnel.js:161:17)
+npm ERR!     at ClientRequest.g (events.js:192:14)
+npm ERR!     at ClientRequest.EventEmitter.emit (events.js:96:17)
+npm ERR!     at CleartextStream.socketErrorListener (http.js:1449:9)
+npm ERR!     at CleartextStream.EventEmitter.emit (events.js:96:17)
+npm ERR!     at Socket.onerror (tls.js:1336:17)
+npm ERR!     at Socket.EventEmitter.emit (events.js:126:20)
+npm ERR!     at Socket._destroy.self.errorEmitted (net.js:329:14)
+npm ERR!     at process.startup.processNextTick.process._tickCallback (node.js:245:9)
+npm ERR! If you need help, you may report this log at:
+npm ERR!     <http://github.com/isaacs/npm/issues>
+npm ERR! or email it to:
+npm ERR!     <npm-@googlegroups.com>
+
+npm ERR! System Darwin 11.4.2
+npm ERR! command "node" "/usr/local/bin/npm" "-g" "install" "acs" "--color" "false" "--proxy" "http://192.168.4.1:3128" "--https-proxy" "https://192.168.4.1:3128"
+npm ERR! cwd /Users/funcatemobile/Documents/Desenvolvimento/Titanium3.1/Titanium Studio/TitaniumStudio.app/Contents/MacOS
+npm ERR! node -v v0.8.22
+npm ERR! npm -v 1.2.14
+npm ERR! code ECONNRESET
+npm ERR! 
+npm ERR! Additional logging details can be found in:
+npm ERR!     /Users/funcatemobile/Documents/Desenvolvimento/Titanium3.1/Titanium Studio/TitaniumStudio.app/Contents/MacOS/npm-debug.log
+npm ERR! not ok code 0
+
+!ENTRY com.appcelerator.titanium.update 4 4 2013-04-20 16:57:38.463
+!MESSAGE Error encountered during update
+!SUBENTRY 1 com.aptana.js.core 4 0 2013-04-20 16:57:38.463
+!MESSAGE Failed to install titanium. Please see the Studio log for more information.
+!SUBENTRY 1 com.aptana.js.core 4 0 2013-04-20 16:57:38.464
+!MESSAGE Failed to install alloy. Please see the Studio log for more information.
+!SUBENTRY 1 com.aptana.js.core 4 0 2013-04-20 16:57:38.464
+!MESSAGE Failed to install acs. Please see the Studio log for more information.
+!SESSION 2013-04-23 11:07:51.883 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_37
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=cocoa, NL=pt_BR
+Framework arguments:  -keyring /Users/funcatemobile/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/funcatemobile/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.core.resources 2 10035 2013-04-23 11:08:04.420
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.net 1 0 2013-04-23 11:08:16.693
+!MESSAGE System property http.proxyHost has been set to 192.168.4.1 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.core.net 1 0 2013-04-23 11:08:16.703
+!MESSAGE System property http.proxyPort has been set to 3128 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.core.net 1 0 2013-04-23 11:08:16.868
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.core.net 1 0 2013-04-23 11:08:16.969
+!MESSAGE The HTTP proxy is enabled in the preferences but disabled in the system settings
+
+!ENTRY org.eclipse.core.net 1 0 2013-04-23 11:08:17.006
+!MESSAGE The SSL proxy is enabled in the preferences but disabled in the system settings
+
+!ENTRY org.eclipse.core.net 1 0 2013-04-23 11:08:17.045
+!MESSAGE System property https.proxyHost has been set to 192.168.4.1 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.core.net 1 0 2013-04-23 11:08:17.046
+!MESSAGE System property https.proxyPort has been set to 3128 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.core.net 1 0 2013-04-23 11:08:17.097
+!MESSAGE The SSL proxy is enabled in the preferences but disabled in the system settings
+
+!ENTRY com.appcelerator.titanium.acs.ui 4 0 2013-04-23 11:08:58.716
+!MESSAGE (Build 3.1.0.201304151600) [ERROR]  Failed to log into Node.ACS: [ERROR] Server returned error status. 411
+
+!ENTRY com.appcelerator.titanium.mobile 4 0 2013-04-23 11:14:30.358
+!MESSAGE (Build 3.1.0.201304151600) [ERROR] com.appcelerator.titanium.mobile/debug/dashboard Unknown SDK tizen
+
+!ENTRY com.appcelerator.titanium.mobile 4 0 2013-04-23 11:14:30.359
+!MESSAGE (Build 3.1.0.201304151600) [ERROR] com.appcelerator.titanium.mobile/debug/dashboard Unknown SDK mobileweb
+
+!ENTRY org.eclipse.osgi 2 1 2013-04-23 11:14:31.092
+!MESSAGE NLS missing message: NodeTitaniumSDKCommandsHandler_mobileWebBuild in: com.appcelerator.titanium.mobile.cli.messages
+
+!ENTRY org.eclipse.ui 4 0 2013-04-23 11:26:28.577
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at com.aptana.ide.syncing.ui.SyncingUIPlugin$3.preExecute(SyncingUIPlugin.java:221)
+	at org.eclipse.core.commands.CommandManager$ExecutionListener.preExecute(CommandManager.java:126)
+	at org.eclipse.core.commands.Command.firePreExecute(Command.java:664)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:454)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:508)
+	at org.eclipse.ui.internal.handlers.HandlerService.executeCommand(HandlerService.java:169)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.executeCommand(WorkbenchKeyboard.java:468)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.press(WorkbenchKeyboard.java:786)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.processKeyEvent(WorkbenchKeyboard.java:885)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.filterKeySequenceBindings(WorkbenchKeyboard.java:567)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.access$3(WorkbenchKeyboard.java:508)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard$KeyDownFilter.handleEvent(WorkbenchKeyboard.java:123)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1069)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4127)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1457)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1480)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1465)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1494)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1490)
+	at org.eclipse.swt.widgets.Tree.sendKeyEvent(Tree.java:2576)
+	at org.eclipse.swt.widgets.Control.keyDown(Control.java:2363)
+	at org.eclipse.swt.widgets.Composite.keyDown(Composite.java:600)
+	at org.eclipse.swt.widgets.Tree.keyDown(Tree.java:1966)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5473)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Widget.callSuper(Widget.java:220)
+	at org.eclipse.swt.widgets.Widget.windowSendEvent(Widget.java:2095)
+	at org.eclipse.swt.widgets.Shell.windowSendEvent(Shell.java:2253)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5535)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Display.applicationSendEvent(Display.java:4989)
+	at org.eclipse.swt.widgets.Display.applicationProc(Display.java:5138)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSApplication.sendEvent(NSApplication.java:128)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3610)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at com.appcelerator.titanium.rcp.IDEApplication.start(IDEApplication.java:125)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+
+!ENTRY org.eclipse.ui 4 0 2013-04-23 11:26:28.841
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at com.aptana.ide.syncing.ui.SyncingUIPlugin$3.preExecute(SyncingUIPlugin.java:221)
+	at org.eclipse.core.commands.CommandManager$ExecutionListener.preExecute(CommandManager.java:126)
+	at org.eclipse.core.commands.Command.firePreExecute(Command.java:664)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:454)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:508)
+	at org.eclipse.ui.internal.handlers.HandlerService.executeCommand(HandlerService.java:169)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.executeCommand(WorkbenchKeyboard.java:468)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.press(WorkbenchKeyboard.java:786)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.processKeyEvent(WorkbenchKeyboard.java:885)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.filterKeySequenceBindings(WorkbenchKeyboard.java:567)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.access$3(WorkbenchKeyboard.java:508)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard$KeyDownFilter.handleEvent(WorkbenchKeyboard.java:123)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1069)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4127)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1457)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1480)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1465)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1494)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1490)
+	at org.eclipse.swt.widgets.Tree.sendKeyEvent(Tree.java:2576)
+	at org.eclipse.swt.widgets.Control.keyDown(Control.java:2363)
+	at org.eclipse.swt.widgets.Composite.keyDown(Composite.java:600)
+	at org.eclipse.swt.widgets.Tree.keyDown(Tree.java:1966)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5473)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Widget.callSuper(Widget.java:220)
+	at org.eclipse.swt.widgets.Widget.windowSendEvent(Widget.java:2095)
+	at org.eclipse.swt.widgets.Shell.windowSendEvent(Shell.java:2253)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5535)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Display.applicationSendEvent(Display.java:4989)
+	at org.eclipse.swt.widgets.Display.applicationProc(Display.java:5138)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSApplication.sendEvent(NSApplication.java:128)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3610)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at com.appcelerator.titanium.rcp.IDEApplication.start(IDEApplication.java:125)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+
+!ENTRY org.eclipse.ui 4 0 2013-04-23 11:26:29.025
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at com.aptana.ide.syncing.ui.SyncingUIPlugin$3.preExecute(SyncingUIPlugin.java:221)
+	at org.eclipse.core.commands.CommandManager$ExecutionListener.preExecute(CommandManager.java:126)
+	at org.eclipse.core.commands.Command.firePreExecute(Command.java:664)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:454)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:508)
+	at org.eclipse.ui.internal.handlers.HandlerService.executeCommand(HandlerService.java:169)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.executeCommand(WorkbenchKeyboard.java:468)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.press(WorkbenchKeyboard.java:786)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.processKeyEvent(WorkbenchKeyboard.java:885)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.filterKeySequenceBindings(WorkbenchKeyboard.java:567)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.access$3(WorkbenchKeyboard.java:508)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard$KeyDownFilter.handleEvent(WorkbenchKeyboard.java:123)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1069)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4127)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1457)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1480)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1465)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1494)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1490)
+	at org.eclipse.swt.widgets.Tree.sendKeyEvent(Tree.java:2576)
+	at org.eclipse.swt.widgets.Control.keyDown(Control.java:2363)
+	at org.eclipse.swt.widgets.Composite.keyDown(Composite.java:600)
+	at org.eclipse.swt.widgets.Tree.keyDown(Tree.java:1966)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5473)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Widget.callSuper(Widget.java:220)
+	at org.eclipse.swt.widgets.Widget.windowSendEvent(Widget.java:2095)
+	at org.eclipse.swt.widgets.Shell.windowSendEvent(Shell.java:2253)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5535)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Display.applicationSendEvent(Display.java:4989)
+	at org.eclipse.swt.widgets.Display.applicationProc(Display.java:5138)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSApplication.sendEvent(NSApplication.java:128)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3610)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at com.appcelerator.titanium.rcp.IDEApplication.start(IDEApplication.java:125)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+
+!ENTRY org.eclipse.ui 4 0 2013-04-23 11:26:29.185
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at com.aptana.ide.syncing.ui.SyncingUIPlugin$3.preExecute(SyncingUIPlugin.java:221)
+	at org.eclipse.core.commands.CommandManager$ExecutionListener.preExecute(CommandManager.java:126)
+	at org.eclipse.core.commands.Command.firePreExecute(Command.java:664)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:454)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:508)
+	at org.eclipse.ui.internal.handlers.HandlerService.executeCommand(HandlerService.java:169)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.executeCommand(WorkbenchKeyboard.java:468)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.press(WorkbenchKeyboard.java:786)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.processKeyEvent(WorkbenchKeyboard.java:885)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.filterKeySequenceBindings(WorkbenchKeyboard.java:567)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.access$3(WorkbenchKeyboard.java:508)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard$KeyDownFilter.handleEvent(WorkbenchKeyboard.java:123)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1069)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4127)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1457)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1480)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1465)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1494)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1490)
+	at org.eclipse.swt.widgets.Tree.sendKeyEvent(Tree.java:2576)
+	at org.eclipse.swt.widgets.Control.keyDown(Control.java:2363)
+	at org.eclipse.swt.widgets.Composite.keyDown(Composite.java:600)
+	at org.eclipse.swt.widgets.Tree.keyDown(Tree.java:1966)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5473)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Widget.callSuper(Widget.java:220)
+	at org.eclipse.swt.widgets.Widget.windowSendEvent(Widget.java:2095)
+	at org.eclipse.swt.widgets.Shell.windowSendEvent(Shell.java:2253)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5535)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Display.applicationSendEvent(Display.java:4989)
+	at org.eclipse.swt.widgets.Display.applicationProc(Display.java:5138)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSApplication.sendEvent(NSApplication.java:128)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3610)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at com.appcelerator.titanium.rcp.IDEApplication.start(IDEApplication.java:125)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+
+!ENTRY org.eclipse.ui 4 0 2013-04-23 11:26:29.337
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at com.aptana.ide.syncing.ui.SyncingUIPlugin$3.preExecute(SyncingUIPlugin.java:221)
+	at org.eclipse.core.commands.CommandManager$ExecutionListener.preExecute(CommandManager.java:126)
+	at org.eclipse.core.commands.Command.firePreExecute(Command.java:664)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:454)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:508)
+	at org.eclipse.ui.internal.handlers.HandlerService.executeCommand(HandlerService.java:169)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.executeCommand(WorkbenchKeyboard.java:468)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.press(WorkbenchKeyboard.java:786)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.processKeyEvent(WorkbenchKeyboard.java:885)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.filterKeySequenceBindings(WorkbenchKeyboard.java:567)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.access$3(WorkbenchKeyboard.java:508)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard$KeyDownFilter.handleEvent(WorkbenchKeyboard.java:123)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1069)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4127)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1457)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1480)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1465)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1494)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1490)
+	at org.eclipse.swt.widgets.Tree.sendKeyEvent(Tree.java:2576)
+	at org.eclipse.swt.widgets.Control.keyDown(Control.java:2363)
+	at org.eclipse.swt.widgets.Composite.keyDown(Composite.java:600)
+	at org.eclipse.swt.widgets.Tree.keyDown(Tree.java:1966)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5473)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Widget.callSuper(Widget.java:220)
+	at org.eclipse.swt.widgets.Widget.windowSendEvent(Widget.java:2095)
+	at org.eclipse.swt.widgets.Shell.windowSendEvent(Shell.java:2253)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5535)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Display.applicationSendEvent(Display.java:4989)
+	at org.eclipse.swt.widgets.Display.applicationProc(Display.java:5138)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSApplication.sendEvent(NSApplication.java:128)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3610)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at com.appcelerator.titanium.rcp.IDEApplication.start(IDEApplication.java:125)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+
+!ENTRY org.eclipse.ui 4 0 2013-04-23 11:26:29.457
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at com.aptana.ide.syncing.ui.SyncingUIPlugin$3.preExecute(SyncingUIPlugin.java:221)
+	at org.eclipse.core.commands.CommandManager$ExecutionListener.preExecute(CommandManager.java:126)
+	at org.eclipse.core.commands.Command.firePreExecute(Command.java:664)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:454)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:508)
+	at org.eclipse.ui.internal.handlers.HandlerService.executeCommand(HandlerService.java:169)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.executeCommand(WorkbenchKeyboard.java:468)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.press(WorkbenchKeyboard.java:786)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.processKeyEvent(WorkbenchKeyboard.java:885)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.filterKeySequenceBindings(WorkbenchKeyboard.java:567)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.access$3(WorkbenchKeyboard.java:508)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard$KeyDownFilter.handleEvent(WorkbenchKeyboard.java:123)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1069)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4127)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1457)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1480)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1465)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1494)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1490)
+	at org.eclipse.swt.widgets.Tree.sendKeyEvent(Tree.java:2576)
+	at org.eclipse.swt.widgets.Control.keyDown(Control.java:2363)
+	at org.eclipse.swt.widgets.Composite.keyDown(Composite.java:600)
+	at org.eclipse.swt.widgets.Tree.keyDown(Tree.java:1966)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5473)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Widget.callSuper(Widget.java:220)
+	at org.eclipse.swt.widgets.Widget.windowSendEvent(Widget.java:2095)
+	at org.eclipse.swt.widgets.Shell.windowSendEvent(Shell.java:2253)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5535)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Display.applicationSendEvent(Display.java:4989)
+	at org.eclipse.swt.widgets.Display.applicationProc(Display.java:5138)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSApplication.sendEvent(NSApplication.java:128)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3610)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at com.appcelerator.titanium.rcp.IDEApplication.start(IDEApplication.java:125)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+
+!ENTRY com.aptana.core 4 0 2013-04-23 11:26:35.914
+!MESSAGE (Build 3.1.0.201304151600) [ERROR]  Error cleaning the build before launching
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error while invoking a synchronous builder
+	at com.appcelerator.titanium.core.launching.TitaniumSingleProjectLaunchConfigurationDelegate.cleanBuild(TitaniumSingleProjectLaunchConfigurationDelegate.java:77)
+	at com.appcelerator.titanium.mobile.ui.android.launch.AndroidSimulatorLaunchConfigurationDelegate.launch(AndroidSimulatorLaunchConfigurationDelegate.java:85)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:854)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.NoSuchMethodException: org.eclipse.core.internal.events.BuildManager.build(org.eclipse.core.internal.resources.BuildConfiguration, int, java.lang.String, java.util.Map, org.eclipse.core.runtime.IProgressMonitor)
+	at java.lang.Class.getMethod(Class.java:1605)
+	at com.aptana.core.util.BuildUtil.syncBuild37(BuildUtil.java:117)
+	at com.aptana.core.util.BuildUtil.syncBuild(BuildUtil.java:73)
+	at com.appcelerator.titanium.core.launching.TitaniumSingleProjectLaunchConfigurationDelegate.cleanBuild(TitaniumSingleProjectLaunchConfigurationDelegate.java:73)
+	... 6 more
+!SUBENTRY 1 com.aptana.core 4 0 2013-04-23 11:26:35.915
+!MESSAGE Error while invoking a synchronous builder
+!STACK 0
+java.lang.NoSuchMethodException: org.eclipse.core.internal.events.BuildManager.build(org.eclipse.core.internal.resources.BuildConfiguration, int, java.lang.String, java.util.Map, org.eclipse.core.runtime.IProgressMonitor)
+	at java.lang.Class.getMethod(Class.java:1605)
+	at com.aptana.core.util.BuildUtil.syncBuild37(BuildUtil.java:117)
+	at com.aptana.core.util.BuildUtil.syncBuild(BuildUtil.java:73)
+	at com.appcelerator.titanium.core.launching.TitaniumSingleProjectLaunchConfigurationDelegate.cleanBuild(TitaniumSingleProjectLaunchConfigurationDelegate.java:73)
+	at com.appcelerator.titanium.mobile.ui.android.launch.AndroidSimulatorLaunchConfigurationDelegate.launch(AndroidSimulatorLaunchConfigurationDelegate.java:85)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:854)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.core 4 0 2013-04-23 11:27:01.305
+!MESSAGE (Build 3.1.0.201304151600) [ERROR]  Error cleaning the build before launching
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error while invoking a synchronous builder
+	at com.appcelerator.titanium.core.launching.TitaniumSingleProjectLaunchConfigurationDelegate.cleanBuild(TitaniumSingleProjectLaunchConfigurationDelegate.java:77)
+	at com.appcelerator.titanium.mobile.ui.android.launch.AndroidSimulatorLaunchConfigurationDelegate.launch(AndroidSimulatorLaunchConfigurationDelegate.java:85)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:854)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.NoSuchMethodException: org.eclipse.core.internal.events.BuildManager.build(org.eclipse.core.internal.resources.BuildConfiguration, int, java.lang.String, java.util.Map, org.eclipse.core.runtime.IProgressMonitor)
+	at java.lang.Class.getMethod(Class.java:1605)
+	at com.aptana.core.util.BuildUtil.syncBuild37(BuildUtil.java:117)
+	at com.aptana.core.util.BuildUtil.syncBuild(BuildUtil.java:73)
+	at com.appcelerator.titanium.core.launching.TitaniumSingleProjectLaunchConfigurationDelegate.cleanBuild(TitaniumSingleProjectLaunchConfigurationDelegate.java:73)
+	... 6 more
+!SUBENTRY 1 com.aptana.core 4 0 2013-04-23 11:27:01.305
+!MESSAGE Error while invoking a synchronous builder
+!STACK 0
+java.lang.NoSuchMethodException: org.eclipse.core.internal.events.BuildManager.build(org.eclipse.core.internal.resources.BuildConfiguration, int, java.lang.String, java.util.Map, org.eclipse.core.runtime.IProgressMonitor)
+	at java.lang.Class.getMethod(Class.java:1605)
+	at com.aptana.core.util.BuildUtil.syncBuild37(BuildUtil.java:117)
+	at com.aptana.core.util.BuildUtil.syncBuild(BuildUtil.java:73)
+	at com.appcelerator.titanium.core.launching.TitaniumSingleProjectLaunchConfigurationDelegate.cleanBuild(TitaniumSingleProjectLaunchConfigurationDelegate.java:73)
+	at com.appcelerator.titanium.mobile.ui.android.launch.AndroidSimulatorLaunchConfigurationDelegate.launch(AndroidSimulatorLaunchConfigurationDelegate.java:85)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:854)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.core 4 0 2013-04-23 11:33:30.005
+!MESSAGE (Build 3.1.0.201304151600) [ERROR]  Error cleaning the build before launching
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error while invoking a synchronous builder
+	at com.appcelerator.titanium.core.launching.TitaniumSingleProjectLaunchConfigurationDelegate.cleanBuild(TitaniumSingleProjectLaunchConfigurationDelegate.java:77)
+	at com.appcelerator.titanium.mobile.ui.android.launch.AndroidSimulatorLaunchConfigurationDelegate.launch(AndroidSimulatorLaunchConfigurationDelegate.java:85)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:854)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.NoSuchMethodException: org.eclipse.core.internal.events.BuildManager.build(org.eclipse.core.internal.resources.BuildConfiguration, int, java.lang.String, java.util.Map, org.eclipse.core.runtime.IProgressMonitor)
+	at java.lang.Class.getMethod(Class.java:1605)
+	at com.aptana.core.util.BuildUtil.syncBuild37(BuildUtil.java:117)
+	at com.aptana.core.util.BuildUtil.syncBuild(BuildUtil.java:73)
+	at com.appcelerator.titanium.core.launching.TitaniumSingleProjectLaunchConfigurationDelegate.cleanBuild(TitaniumSingleProjectLaunchConfigurationDelegate.java:73)
+	... 6 more
+!SUBENTRY 1 com.aptana.core 4 0 2013-04-23 11:33:30.005
+!MESSAGE Error while invoking a synchronous builder
+!STACK 0
+java.lang.NoSuchMethodException: org.eclipse.core.internal.events.BuildManager.build(org.eclipse.core.internal.resources.BuildConfiguration, int, java.lang.String, java.util.Map, org.eclipse.core.runtime.IProgressMonitor)
+	at java.lang.Class.getMethod(Class.java:1605)
+	at com.aptana.core.util.BuildUtil.syncBuild37(BuildUtil.java:117)
+	at com.aptana.core.util.BuildUtil.syncBuild(BuildUtil.java:73)
+	at com.appcelerator.titanium.core.launching.TitaniumSingleProjectLaunchConfigurationDelegate.cleanBuild(TitaniumSingleProjectLaunchConfigurationDelegate.java:73)
+	at com.appcelerator.titanium.mobile.ui.android.launch.AndroidSimulatorLaunchConfigurationDelegate.launch(AndroidSimulatorLaunchConfigurationDelegate.java:85)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:854)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.osgi 2 1 2013-04-23 11:44:55.749
+!MESSAGE NLS missing message: IOSPackagerLaunchConfigurationDelegate_copy_app_error in: com.appcelerator.titanium.mobile.iphone.launching.messages
+
+!ENTRY org.eclipse.osgi 2 1 2013-04-23 11:44:55.759
+!MESSAGE NLS missing message: IOSPackagerLaunchConfigurationDelegate_copy_ipa_error in: com.appcelerator.titanium.mobile.iphone.launching.messages
+
+!ENTRY com.appcelerator.titanium.mobile 4 0 2013-04-23 11:56:48.038
+!MESSAGE (Build 3.1.0.201304151600) [ERROR]  Error cleaning the project. A manual clean will be performed.

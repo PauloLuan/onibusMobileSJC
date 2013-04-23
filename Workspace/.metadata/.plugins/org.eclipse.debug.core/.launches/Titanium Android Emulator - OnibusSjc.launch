@@ -3,6 +3,7 @@
 <booleanAttribute key="ATTR_CLEAN_BEFORE_LAUNCH" value="true"/>
 <stringAttribute key="ATTR_LOG_LEVEL" value="Info"/>
 <stringAttribute key="ATTR_PROJECT_NAME" value="OnibusSjc"/>
+<stringAttribute key="abi" value="armeabi"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
 <listEntry value="/OnibusSjc"/>
 </listAttribute>

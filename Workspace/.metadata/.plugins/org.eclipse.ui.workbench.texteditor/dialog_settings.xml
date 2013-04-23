@@ -2,18 +2,19 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="isRegEx"/>
 		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
 		<item value="false" key="wholeword"/>
-		<item value="lineId" key="selection"/>
+		<item value="listBusTab" key="selection"/>
 		<list key="findhistory">
+			<item value="listBusTab"/>
+			<item value="navGroup"/>
+			<item value="nav"/>
 			<item value="lineId"/>
 			<item value="jsonString"/>
 			<item value="Main"/>
 			<item value="tab3"/>
 			<item value="win3"/>
-			<item value="tab2"/>
-			<item value="win2"/>
 		</list>
 	</section>
 </section>
