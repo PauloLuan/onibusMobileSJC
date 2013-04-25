@@ -15,9 +15,7 @@ if (Ti.version < 1.8) {
 	alert('Sorry - this application template requires Titanium Mobile SDK 1.8 or later');
 }
 
-// This is a single context application with mutliple windows in a stack
 (function() {
-
 	Ti.Database.install('database/onibus.sqlite', 'onibus');
 
 	Ti.App.createNormalLabel = function(text) {
@@ -34,6 +32,14 @@ if (Ti.version < 1.8) {
 		});
 		return label;
 	}
+
+	Ti.App.isNumber = function(n){
+		return !isNaN(parseFloat(n)) && isFinite(n);
+	}
+})();
+
+
+(function() {
 	//determine platform and form factor and render approproate components
 	var osname = Ti.Platform.osname, version = Ti.Platform.version, height = Ti.Platform.displayCaps.platformHeight, width = Ti.Platform.displayCaps.platformWidth;
 

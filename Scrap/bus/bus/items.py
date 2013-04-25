@@ -10,6 +10,7 @@ class Onibus(Item):
 	numero = Field()
 	nome = Field()
 	sentido = Field()
+	sentido_completo = Field()
 	horarios = Field()
 	link = Field()
 

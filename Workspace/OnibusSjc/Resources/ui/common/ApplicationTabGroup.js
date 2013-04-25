@@ -10,8 +10,8 @@ function ApplicationTabGroup(Window) {
 		About = require('ui/common/5-About');
 
 	thisObject.tabGroup = Ti.UI.createTabGroup();
-	thisObject.listBusTab; 
-	
+	thisObject.listBusTab;
+
 	this.initializeTabs = function() {
 		thisObject.createMainTab();
 		thisObject.createListBusTab();
@@ -60,7 +60,8 @@ function ApplicationTabGroup(Window) {
 		listBusWindow.containingTab = thisObject.listBusTab;
 
 		listBusView.addEventListener('openScreenDetailsBusTime', function(e) {
-			thisObject.openScreenDetailsBusTime(e.id, e.json);
+			var bus = e.json[e.id]
+			thisObject.openScreenDetailsBusTime(bus);
 		});
 
 		thisObject.tabGroup.addTab(thisObject.listBusTab);
