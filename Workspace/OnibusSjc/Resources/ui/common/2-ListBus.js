@@ -1,7 +1,6 @@
 function ListBus() {
 	var thisObject = this;
 
-	//create object instance, a parasitic subclass of Observable
 	this.view = Ti.UI.createView();
 
 	this.getListBusView = function() {

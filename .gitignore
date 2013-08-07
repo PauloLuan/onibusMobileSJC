@@ -1,6 +1,8 @@
 /Workspace/OnibusSjc/build/*
 /Workspace/OnibusSjc/build/
 Workspace/OnibusSjc/build
+Workspace/.metadata/
+Workspace/.metadata/*
 
 # OS generated files #
 ######################
