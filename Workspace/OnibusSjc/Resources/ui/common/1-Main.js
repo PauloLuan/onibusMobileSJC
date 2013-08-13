@@ -3,8 +3,8 @@ function Main() {
 	this.Database = require('ui/common/db');
 	
 	this.view = Ti.UI.createScrollView({
-		height : 'auto',
-		widght : 'auto',
+		//height : 'auto',
+		//widght : 'auto',
 		layout : 'vertical'
 	});
 
@@ -21,6 +21,13 @@ function Main() {
 	//TODO: verificar feriados do ano...
 	this.showNextBusFavorites = function()
 	{
+		
+		thisObject.view = Ti.UI.createScrollView({
+			height : 'auto',
+			widght : 'auto',
+			layout : 'vertical'
+		});
+		
 		var json = thisObject.Database.getBusJson();
 
 		if (!json.favorites)
@@ -41,7 +48,8 @@ function Main() {
 				
 				if(bus)
 				{
-					var schedules = Ti.App.getOnlyTimeFromBus(bus);
+					var utils = require("ui/common/utils");
+					var schedules = utils.getOnlyTimeFromBus(bus);
 					var todaySchedule;
 					var today = new Date();
 			
@@ -65,16 +73,29 @@ function Main() {
 
 	this.addTimesFromFavoritesToMainView = function(bus, times)
 	{
-		var contentView = Ti.UI.createView({
-			backgroundColor : 'white',
+		var contentView = Ti.UI.createScrollView({
+			
+			borderColor : 'black',
 			borderWidth : 1,
 			layout : 'vertical',
-			height : 'auto',
+			height : '180',
 			top : '10dp',
 			right : '10dp',
 			left : '10dp',
 			bottom : '10dp'
+			
+			/*backgroundColor : 'white',
+			borderWidth : 1,
+			layout : 'vertical',
+			//height : 'auto',
+			top : '10dp',
+			right : '10dp',
+			left : '10dp'
+			//bottom : '10dp'
+			*/
 		});
+
+
 
 		var lbl1 = Ti.App.createNormalLabel('Linha: ' + bus.numero + " (" + bus.nome + ")");
 		var lbl2 = Ti.App.createNormalLabel('Sentido: ' + bus.sentido);
@@ -112,14 +133,14 @@ function Main() {
 			var arrayHour = tempTime.substring(0, 2);
 			var arrayMinute = tempTime.substring(3, 5);
 
-			var currentHour = time.getHours();
+			var currentHours = time.getHours();
 			var currentMinutes = time.getMinutes();
 
-			//var currentHour = 10; 
-			//var currentMinute = 35;
+			//var currentHours = 10; 
+			//var currentMinutes = 35;
 
-			if (arrayHour >= currentHour && arrayMinute >= currentMinute 
-				|| arrayHour >= currentHour && count < qtd) 
+			if (arrayHour >= currentHours && arrayMinute >= currentMinutes 
+				|| arrayHour >= currentHours && count < qtd) 
 			{
 				count++;
 				nextTimes.push(arrayHour + ":" + arrayMinute);

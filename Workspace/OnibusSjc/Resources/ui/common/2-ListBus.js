@@ -9,12 +9,9 @@ function ListBus() {
 	}
 
 	this.openConnectionToDatabase = function() {
-		var db = Ti.Database.open('onibus');
-		var rows = db.execute('SELECT * FROM onibus');
-		var jsonString = rows.fieldByName('json');
-		var json = JSON.parse(jsonString);
-		Ti.API.info('\nOnibus 1: ' + json[0].nome);
-		thisObject.createListView(json);
+		var db = require('ui/common/db');
+		var json = db.getBusJson();
+		thisObject.createListView(json.items);
 	}
 
 	this.createListView = function(json) {

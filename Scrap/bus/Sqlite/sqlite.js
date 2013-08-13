@@ -70,14 +70,17 @@ var initialize = function () {
 
         var prep = connection.prepareStatement(
             "INSERT INTO onibus (id, json) VALUES (?, ?);"
-            );
+        );
 
-        var json = require("./items.json");
+        var items = require("./items.json");
 
-        for (var i = 0; i < json.length; i++) {
-            var hash = sha1(json[i].nome + json[i].sentido);
-            json[i].hash = hash
+        for (var i = 0; i < items.length; i++) {
+            var hash = sha1(items[i].nome + items[i].sentido);
+            items[i].hash = hash
         };
+
+        var json = {};
+        json["items"] = items;
 
         var jsonString = JSON.stringify(json);
         prep.setString(1, 1);

@@ -54,11 +54,12 @@ var db = {
 	
 	getBusByHash : function(hash) {
 		var json = this.getBusJson();
+		var items = json.items;
 		var bus;
 
-		for (var i = 0; i < json.length; i++) {
-			if (json[i].hash === hash) {
-				bus = json[i];
+		for (var i = 0; i < items.length; i++) {
+			if (items[i].hash === hash) {
+				bus = items[i];
 				break;
 			}
 		};
@@ -84,7 +85,7 @@ var db = {
 				isUpdated = true;
 			}
 			db.close();
-			Ti.API.info("Salvo! " + stringJson);
+			Ti.API.info("Salvo! " + json.favorites);
 			Ti.App.fireEvent("refreshFavoritesView");
 		}
 		catch(error)
@@ -92,7 +93,7 @@ var db = {
 			Ti.API.info("Erro DB: " + error);
 		}
 
-		return isUpdated;
+		return isUpdated;	
 	}
 	
 }
