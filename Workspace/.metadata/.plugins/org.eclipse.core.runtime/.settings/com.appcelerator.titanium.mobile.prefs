@@ -1,2 +1,4 @@
-ANDROID_SDK_PATH=/Users/funcatemobile/Documents/Desenvolvimento/android-sdk-macosx
+ANDROID_SDK_PATH=/Users/funcatemobile/Documents/Desenvolvimento/Android/sdk
+DEFAULT_ANDROID_SCREEN_TYPE=HVGA
+DEFAULT_ANDROID_SDK=Android 4.2.2
 eclipse.preferences.version=1

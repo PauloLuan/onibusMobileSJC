@@ -73,29 +73,24 @@ function Main() {
 
 	this.addTimesFromFavoritesToMainView = function(bus, times)
 	{
-		var contentView = Ti.UI.createScrollView({
-			
+		var parentView = Ti.UI.createView({
 			borderColor : 'black',
 			borderWidth : 1,
-			layout : 'vertical',
-			height : '180',
+			height : Ti.UI.SIZE,
 			top : '10dp',
 			right : '10dp',
 			left : '10dp',
 			bottom : '10dp'
-			
-			/*backgroundColor : 'white',
-			borderWidth : 1,
+		});
+		
+		var contentView = Ti.UI.createView({
 			layout : 'vertical',
-			//height : 'auto',
+			height : Ti.UI.SIZE,
 			top : '10dp',
 			right : '10dp',
-			left : '10dp'
-			//bottom : '10dp'
-			*/
+			left : '10dp',
+			bottom : '20dp'
 		});
-
-
 
 		var lbl1 = Ti.App.createNormalLabel('Linha: ' + bus.numero + " (" + bus.nome + ")");
 		var lbl2 = Ti.App.createNormalLabel('Sentido: ' + bus.sentido);
@@ -106,7 +101,9 @@ function Main() {
 		contentView.add(lbl2);
 		contentView.add(lbl3);
 		
-		thisObject.view.add(contentView);
+		parentView.add(contentView);
+		
+		thisObject.view.add(parentView);
 	};
 
 	
